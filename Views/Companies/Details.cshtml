@@ -1,0 +1,82 @@
+﻿@model MVCApplication.Models.Company
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Company</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.caddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.caddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cemail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cemail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ccno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ccno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cpackage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cpackage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cjobprofile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cjobprofile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.crequiremet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.crequiremet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cdateofdrive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cdateofdrive)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

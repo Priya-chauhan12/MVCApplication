@@ -1,0 +1,154 @@
+﻿@model MVCApplication.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sgender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sgender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.scno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.scno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.semail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.semail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.spassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.spassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sdob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sdob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.saddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.saddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sssc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sssc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shsc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shsc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.scpi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.scpi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sspi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sspi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sskill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sskill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.srollno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.srollno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sbranch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sbranch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ssem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ssem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.srank)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.srank)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.sid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        <h2>Welcome to Placement Automation System</h2>
+        <br />
+        <br />
+        <h4>@ViewBag.Message</h4>
+        @using (Html.BeginForm("LoginUser", "Home", FormMethod.Post, new {@class="form-horizontal user", role="form" ,enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            <h3>Enter Username</h3>
+            <input id="Text1" type="text" name="sname" />
+            <h3>Enter Password</h3>
+            <input id="Text1" type="password" name="password" />
+            <input id="Submit1" type="submit" value="login" />
+            
+            <a href="About">Create an account</a>
+        }
+        </div>
+</body>
+</html>

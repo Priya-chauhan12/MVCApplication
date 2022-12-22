@@ -1,0 +1,129 @@
+﻿@model IEnumerable<MVCApplication.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.sname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sgender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.scno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.semail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.spassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sdob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.saddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sssc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shsc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.scpi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sspi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sskill)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.srollno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sbranch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ssem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.srank)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.sname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sgender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.scno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.semail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.spassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sdob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.saddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sssc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shsc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.scpi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sspi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sskill)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.srollno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sbranch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ssem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.stype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.srank)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.sid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.sid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.sid })
+        </td>
+    </tr>
+}
+
+</table>

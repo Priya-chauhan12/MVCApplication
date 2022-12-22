@@ -1,0 +1,75 @@
+﻿@model IEnumerable<MVCApplication.Models.Company>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.caddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cemail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ccno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cpackage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cjobprofile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.crequiremet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cdateofdrive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.caddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cemail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ccno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cpackage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cjobprofile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.crequiremet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cdateofdrive)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cid })
+        </td>
+    </tr>
+}
+
+</table>

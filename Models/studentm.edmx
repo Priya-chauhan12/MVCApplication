@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PlacementDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="cid" />
+          </Key>
+          <Property Name="cid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cname" Type="varchar" MaxLength="50" />
+          <Property Name="caddress" Type="varchar" MaxLength="200" />
+          <Property Name="cemail" Type="varchar" MaxLength="50" />
+          <Property Name="ccno" Type="varchar" MaxLength="10" />
+          <Property Name="cpackage" Type="float" />
+          <Property Name="cjobprofile" Type="varchar" MaxLength="500" />
+          <Property Name="crequiremet" Type="int" />
+          <Property Name="cdateofdrive" Type="date" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="sname" Type="varchar" MaxLength="50" />
+          <Property Name="sgender" Type="varchar" MaxLength="6" />
+          <Property Name="scno" Type="varchar" MaxLength="10" />
+          <Property Name="semail" Type="varchar" MaxLength="50" />
+          <Property Name="spassword" Type="varchar" MaxLength="8" />
+          <Property Name="sdob" Type="date" />
+          <Property Name="saddress" Type="varchar" MaxLength="300" />
+          <Property Name="sssc" Type="float" />
+          <Property Name="shsc" Type="float" />
+          <Property Name="scpi" Type="float" />
+          <Property Name="sspi" Type="float" />
+          <Property Name="sskill" Type="varchar" MaxLength="500" />
+          <Property Name="srollno" Type="varchar" MaxLength="5" />
+          <Property Name="sbranch" Type="varchar" MaxLength="2" />
+          <Property Name="ssem" Type="int" />
+          <Property Name="stype" Type="varchar" MaxLength="50" />
+          <Property Name="srank" Type="int" />
+        </EntityType>
+        <EntityContainer Name="PlacementDBModelStoreContainer">
+          <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PlacementDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="cid" />
+          </Key>
+          <Property Name="cid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="caddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="cemail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ccno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="cpackage" Type="Double" />
+          <Property Name="cjobprofile" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="crequiremet" Type="Int32" />
+          <Property Name="cdateofdrive" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="sid" />
+          </Key>
+          <Property Name="sid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sgender" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="scno" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="semail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="spassword" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="sdob" Type="DateTime" Precision="0" />
+          <Property Name="saddress" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="sssc" Type="Double" />
+          <Property Name="shsc" Type="Double" />
+          <Property Name="scpi" Type="Double" />
+          <Property Name="sspi" Type="Double" />
+          <Property Name="sskill" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="srollno" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="sbranch" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="ssem" Type="Int32" />
+          <Property Name="stype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="srank" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="PlacementDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Companies" EntityType="Self.Company" />
+          <EntitySet Name="Students" EntityType="Self.Student" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PlacementDBModelStoreContainer" CdmEntityContainer="PlacementDBEntities">
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="PlacementDBModel.Company">
+              <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="cid" ColumnName="cid" />
+                <ScalarProperty Name="cname" ColumnName="cname" />
+                <ScalarProperty Name="caddress" ColumnName="caddress" />
+                <ScalarProperty Name="cemail" ColumnName="cemail" />
+                <ScalarProperty Name="ccno" ColumnName="ccno" />
+                <ScalarProperty Name="cpackage" ColumnName="cpackage" />
+                <ScalarProperty Name="cjobprofile" ColumnName="cjobprofile" />
+                <ScalarProperty Name="crequiremet" ColumnName="crequiremet" />
+                <ScalarProperty Name="cdateofdrive" ColumnName="cdateofdrive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="PlacementDBModel.Student">
+              <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="sid" ColumnName="sid" />
+                <ScalarProperty Name="sname" ColumnName="sname" />
+                <ScalarProperty Name="sgender" ColumnName="sgender" />
+                <ScalarProperty Name="scno" ColumnName="scno" />
+                <ScalarProperty Name="semail" ColumnName="semail" />
+                <ScalarProperty Name="spassword" ColumnName="spassword" />
+                <ScalarProperty Name="sdob" ColumnName="sdob" />
+                <ScalarProperty Name="saddress" ColumnName="saddress" />
+                <ScalarProperty Name="sssc" ColumnName="sssc" />
+                <ScalarProperty Name="shsc" ColumnName="shsc" />
+                <ScalarProperty Name="scpi" ColumnName="scpi" />
+                <ScalarProperty Name="sspi" ColumnName="sspi" />
+                <ScalarProperty Name="sskill" ColumnName="sskill" />
+                <ScalarProperty Name="srollno" ColumnName="srollno" />
+                <ScalarProperty Name="sbranch" ColumnName="sbranch" />
+                <ScalarProperty Name="ssem" ColumnName="ssem" />
+                <ScalarProperty Name="stype" ColumnName="stype" />
+                <ScalarProperty Name="srank" ColumnName="srank" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
