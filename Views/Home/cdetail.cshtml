@@ -1,14 +1,12 @@
 ﻿@model IEnumerable<MVCApplication.Models.Company>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Company's Details";
 }
 
-<h2>Index</h2>
+<h2>All Company Details</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
@@ -65,11 +63,14 @@
             @Html.DisplayFor(modelItem => item.cdateofdrive)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.cid }) |
-            @Html.ActionLink("Details", "Details", new { id=item.cid }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.cid })
+            @Html.ActionLink("Edit", "Edit", new { id = item.cid }) |
+            @Html.ActionLink("Details", "Details", new { id = item.cid }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.cid })
         </td>
     </tr>
 }
 
 </table>
+<div>
+    @Html.ActionLink("Back to Home Page", "Index")
+</div>

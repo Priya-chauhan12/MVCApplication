@@ -15,7 +15,7 @@
         <h2>Welcome to Placement Automation System</h2>
         <br />
         <br />
-        <h4>@ViewBag.Message</h4>
+        <h4>@ViewBag.message</h4>
         @using (Html.BeginForm("LoginUser", "Home", FormMethod.Post, new {@class="form-horizontal user", role="form" ,enctype = "multipart/form-data" }))
         {
             @Html.AntiForgeryToken()

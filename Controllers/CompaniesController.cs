@@ -15,10 +15,7 @@ namespace MVCApplication.Controllers
         private PlacementDBEntities db = new PlacementDBEntities();
 
         // GET: Companies
-        public ActionResult Index()
-        {
-            return View(db.Companies.ToList());
-        }
+        
 
         // GET: Companies/Details/5
         public ActionResult Details(int? id)
