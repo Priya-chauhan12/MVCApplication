@@ -39,7 +39,7 @@ namespace MVCApplication.Controllers
                             Session["sname"] = finduser[0].sname;
                             Session["spassword"] = finduser[0].spassword;
                             
-                            return RedirectToAction("About");
+                            return RedirectToAction("Students/Index.cshtml");
                         }
                         else
                         {
